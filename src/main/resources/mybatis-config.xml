@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <properties>
+        <property name="databaseName" value="tf_f_user"/>
+    </properties>
+    <settings>
+        <setting name="lazyLoadingEnabled" value="true"/>
+        <setting name="logImpl" value = "LOG4J"/>
+    </settings>
+    <typeAliases>
+        <typeAlias type="com.c2.model.Role" alias="role"/>
+    </typeAliases>
+
+    <typeHandlers>
+        <!--<typeHandler handler="com.c2.handler.MyStringHandler" javaType="string" jdbcType="VARCHAR"/>-->
+    </typeHandlers>
+    <plugins>
+        <plugin interceptor="com.c2.interceptor.SpliteDataSourceInterceptor">
+            <property name="" value=""/>
+        </plugin>
+    </plugins>
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"></transactionManager>
+            <dataSource type="pooled">
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://192.168.107.127:3306/girls?useSSL=false"/>
+                <property name="username" value="rootcc123"/>
+                <property name="password" value="root123"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <!--<mapper url="file:///H:/proj/new/ibatisTest/src/main/java/com/c2/mapper/RoleMapper.xml"/>-->
+
+        <!--<mapper resource="com/c2/mapper/UserMapper.xml"/>-->
+        <package name="com.c2.mapper"/>
+
+    </mappers>
+</configuration>
