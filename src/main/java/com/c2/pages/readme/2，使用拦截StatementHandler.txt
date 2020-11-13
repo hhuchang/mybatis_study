@@ -1,0 +1,4 @@
+想改变mybatis内部的分页行为，理论上只要把最终要执行的sql转变成对应的分页语句就行了。
+首先，我们熟悉下mybatis内部执行查询的动态交互图：
+真正生成Statement并执行sql的语句是StatementHandler接口的某个实现，这样就可以写个插
+件对StatementHandler的行为进行拦截。
