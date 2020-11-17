@@ -38,6 +38,7 @@
 
         <!--<mapper resource="com/c2/mapper/UserMapper.xml"/>-->
         <package name="com.c2.mapper"/>
+        <!--mappers 的几种方式-->
 
     </mappers>
 </configuration>
