@@ -7,7 +7,9 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import java.io.IOException;
 import java.io.InputStream;
-
+/**
+用来测试中古
+ */
 public class MyBatisTest {
     public static void main(String[] args) {
 

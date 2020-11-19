@@ -6,7 +6,8 @@ import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.*;
-
+/**
+用来处理电子书的五年间 */
 public class shaixuan {
     public static void main(String[] args) {
         String path="H:\\proj\\kindle\\电纸书软件\\html2\\text";
